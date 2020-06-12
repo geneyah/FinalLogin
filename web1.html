@@ -1,0 +1,68 @@
+<?php
+   ob_start();
+   session_start();
+?>
+<?
+  
+?>
+<!DOCTYPE HTML>
+   <head>
+      <title>LOGIN</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+      <link href="try.css" rel="stylesheet" type="text/css">
+     
+     
+   </head>
+   <body>
+   
+    <header>
+        <div class="login-msg-holder1">
+            <h2 id="success-msg2"> It works</h2>
+        </div>
+      </header>
+
+      <div class="login-container">
+         <img class="avatar" src="pic1.svg" alt="header_image">
+        </div>
+       
+      <div class = "container log-in">
+         <form name = "login">
+            <p>
+            <input type="text" class = "form-control"  id="username-field" name="username" placeholder = "Username" required autofocus /> 
+            </p>
+            <p>
+            <input type="password"  class = "form-control" name="password" placeholder = "Password" required autofocus />
+            </p>
+            <button onclick="check(this.form)"  class = "btn btn-primary btn-lg btn-block" type = "submit" name = "login">Login</button>
+
+    </form>
+    <footer>
+        <div class="login-msg-holder1">
+          <h2 id="success-msg1"> It works</h2>
+        </div>
+    </footer>
+    <script language="javascript">
+        function check(form)/*function to check userid & password*/
+        {
+        /*the following code checkes whether the entered userid and password are matching*/
+        if(form.username.value == "user" && form.password.value == "user")
+        {
+            document.getElementById("success-msg1").style.opacity=1;
+        }
+        else if(form.username.value =="admin" && form.password.value == "admin")
+        {
+            document.getElementById("success-msg2").style.opacity=1;
+        }
+        else
+        {
+            alert("Error Password or Username")/*displays error message*/
+        }
+        }
+     </script>
+            
+      </div> 
+   </body>
+</html>
